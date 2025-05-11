@@ -1,0 +1,87 @@
+## Creative Test Case Scenario Interview Questions
+
+### 1. How would you test an elevator?
+Think about max weight, emergency stop, multiple floor presses, power failure, etc.
+
+
+
+### 2. Test a pen.
+Consider ink flow, writing angle, surface type, pressure, cap fitting, etc.
+
+
+
+### 3. Test a cup or glass.
+
+Drop test, heat resistance, volume capacity, dishwasher compatibility, etc.
+
+
+
+### 4. How would you test a Facebook “Like” button?
+
+Logged in/out users, multiple clicks, reaction conflict, undo like, etc.
+
+
+
+### 5. How would you test an ATM machine?
+
+Network issues, wrong PIN, card swiping time, withdrawal limits, etc.
+
+
+
+### 6. How would you test a calendar application?
+
+Leap years, daylight saving, time zones, recurring events, etc.
+
+
+
+### 7. Test a login page without using credentials.
+
+Bypass attempts, session storage, cookie manipulation, social login, etc.
+
+
+
+### 8. Test a mobile phone's alarm clock.
+
+Phone off/on, silent mode, multiple alarms, snooze, vibration-only, etc.
+
+
+
+### 9. Test an online shopping cart.
+
+Quantity changes, removal of items, stock limits, guest vs. registered users.
+
+
+
+### 10. How would you test a mirror?
+
+Reflection quality, angle distortion, light conditions, foggy environments.
+
+
+
+### 11. Test a “Send Email” feature.
+
+Network issues, attachments, HTML content, spam filtering, invalid emails.
+
+
+
+### 12. How would you test Google Maps?
+
+Location accuracy, route change, offline use, traffic updates, wrong inputs.
+
+
+
+### 13. Test a vending machine.
+
+Power loss mid-operation, change return, stuck item, wrong product.
+
+
+
+### 14. How would you test a chair?
+
+Load testing, height adjust, material quality, tilt mechanism, ergonomics.
+
+
+
+### 15. Test a remote control.
+
+Signal range, battery level, button durability, infrared vs Bluetooth.
