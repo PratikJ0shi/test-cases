@@ -184,6 +184,5 @@
 | E10              | Verify session termination after logout across all tabs.   | 1. Open multiple tabs with the app. <br> 2. Click logout in one tab. | User should be logged out from all active tabs.            | High         |
 
 ----
-
 **Prepared by:** [Pratik Joshi]   
-**Module:** Form Testing
+**Module:** | Form Testing | logout-testcases |
