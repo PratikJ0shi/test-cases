@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Software Testing Test Cases</title>
+    <style>
+        /* General Styles */
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f7f6;
+            margin: 0;
+            padding: 0;
+            color: #333;
+        }
+
+        h1, h2 {
+            text-align: center;
+            margin-top: 30px;
+        }
+
+        h1 {
+            color: #27ae60;
+        }
+
+        h2 {
+            color: #2c3e50;
+        }
+
+        h3 {
+            color: #2980b9;
+        }
+
+        p, ul {
+            font-size: 1.1em;
+            line-height: 1.6;
+            margin: 10px 0;
+        }
+
+        ul {
+            margin-left: 20px;
+        }
+
+        .section {
+            margin: 30px auto;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            width: 90%;
+            max-width: 900px;
+        }
+
+        .section h2 {
+            border-bottom: 2px solid #27ae60;
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+        }
+
+        .section-1 {
+            background-color: #ecf9f0; /* Light Green */
+        }
+
+        .section-2 {
+            background-color: #f9f1ec; /* Light Peach */
+        }
+
+        .section-3 {
+            background-color: #e6f7ff; /* Light Blue */
+        }
+
+        .section-4 {
+            background-color: #f3e6ff; /* Light Purple */
+        }
+
+        .section-5 {
+            background-color: #fff3e6; /* Light Orange */
+        }
+
+        .table-wrapper {
+            margin: 40px 0;
+            padding: 20px;
+            border-radius: 8px;
+            background-color: #fff;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        table th, table td {
+            padding: 15px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+
+        table th {
+            background-color: #27ae60;
+            color: white;
+        }
+
+        table td a {
+            color: #2980b9;
+            text-decoration: none;
+        }
+
+        table td a:hover {
+            text-decoration: underline;
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            margin-top: 40px;
+        }
+
+        footer a {
+            color: #fff;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 600px) {
+            body {
+                padding: 10px;
+                font-size: 1em;
+            }
+
+            h1 {
+                font-size: 1.5em;
+            }
+
+            h2, h3 {
+                font-size: 1.2em;
+            }
+
+            .section {
+                padding: 10px;
+                margin: 20px 0;
+            }
+
+            .table-wrapper {
+                padding: 10px;
+            }
+
+            table th, table td {
+                padding: 10px;
+                font-size: 0.9em;
+            }
+
+            footer {
+                padding: 15px;
+                font-size: 0.9em;
+            }
+
+            .test-case-list li {
+                font-size: 0.9em;
+            }
+        }
+
+        @media (max-width: 480px) {
+            table, th, td {
+                display: block;
+                width: 100%;
+            }
+
+            table th {
+                text-align: center;
+                background-color: #27ae60;
+            }
+
+            table td {
+                display: block;
+                padding: 10px;
+                text-align: right;
+            }
+
+            table td:before {
+                content: attr(data-label);
+                font-weight: bold;
+                text-align: left;
+                display: block;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Section 1 -->
+    <div class="section section-1">
+        <h1>📝 Software Testing Test Cases</h1>
+        <p>Welcome to my collection of practiced software testing test cases. This repository serves as a demonstration of different types of test cases, categorized for easy reference and understanding.</p>
+    </div>
+
+    <!-- Section 2 -->
+    <div class="section section-2">
+        <h2>🔍 Types of Test-Cases Practiced</h2>
+
+        <h3>🟢 Sanity Testing</h3>
+        <p>Quick checks to ensure basic functionality works before deeper testing.</p>
+
+        <h3>🔥 Smoke Testing</h3>
+        <p>Basic tests to verify the system's stability for further testing.</p>
+
+        <h3>🔁 Retesting</h3>
+        <p>Re-execution of failed test cases after fixing defects.</p>
+
+        <h3>🔄 Regression Testing</h3>
+        <p>Verifying that new code changes haven’t caused any problems with existing features.</p>
+        <ul>
+            <li>Confirming that new updates do not break existing features.</li>
+            <li>Examples: After bug fixes, after adding new features.</li>
+        </ul>
+
+        <h3>🌐 End-to-End Testing</h3>
+        <p>Testing the entire process a user would follow, from start to finish.</p>
+
+        <h3>✅ Positive and Negative Testing</h3>
+        <p>Testing with valid and invalid inputs to verify system behavior.</p>
+
+        <h3>📐 Boundary Testing</h3>
+        <p>Checking the edges of input ranges and limit conditions.</p>
+
+        <h3>🎯 Edge Case Testing</h3>
+        <p>Checking how the system behaves in unexpected or extreme cases.</p>
+
+        <h3>🎨 UI Testing</h3>
+        <p>Checking interface layout, consistency, and responsiveness.</p>
+        <ul>
+            <li>Ensuring the interface is user-friendly and intuitive.</li>
+            <li>Examples: Button alignment, navigation flow, form interactions.</li>
+        </ul>
+
+        <h3>🧩 Functional Testing</h3>
+        <p>Testing each function of the application as per requirements.</p>
+        <ul>
+            <li>Verifying specific functions of the application as per requirements.</li>
+            <li>Examples: Login functionality, form validation, CRUD operations.</li>
+        </ul>
+
+        <h3>⚙️ Non-Functional Testing</h3>
+        <ul>
+            <li>Assessing performance, usability, reliability, and scalability.</li>
+            <li>Examples: Load testing, UI responsiveness, accessibility.</li>
+        </ul>
+
+        <h3>🧪 Exploratory Testing</h3>
+        <p>Simultaneous learning, test design, and execution.</p>
+
+        <h3>👥 Role-Based Testing</h3>
+        <p>Validating access control and permissions.</p>
+
+        <h3>📥 Input Validation</h3>
+        <p>Ensuring only correct data is accepted in forms and fields.</p>
+
+        <h3>🧠 Usability Testing</h3>
+        <p>Testing for user experience and ease of use.</p>
+
+        <h3>🔗 Integration Testing</h3>
+        <ul>
+            <li>Testing interactions between integrated modules or components.</li>
+            <li>Examples: API testing, service communication, database connections.</li>
+        </ul>
+    </div>
+
+    <!-- Section 3 -->
+    <div class="section section-3">
+        <h2>🗂 Test Case Examples</h2>
+
+        <h3>📌 Login Functionality</h3>
+        <ul>
+            <li><strong>Test Case 1:</strong> Verify valid login with correct credentials.</li>
+            <li><strong>Test Case 2:</strong> Verify invalid login with incorrect credentials.</li>
+            <li><strong>Test Case 3:</strong> Verify login with empty fields.</li>
+        </ul>
+
+        <h3>📌 Search Feature</h3>
+        <ul>
+            <li><strong>Test Case 1:</strong> Verify search results for exact match.</li>
+            <li><strong>Test Case 2:</strong> Verify search results for partial match.</li>
+        </ul>
+
+        <h3>📌 Form Submission</h3>
+        <ul>
+            <li><strong>Test Case 1:</strong> Verify form submission with all required fields filled.</li>
+            <li><strong>Test Case 2:</strong> Verify form error messages for missing required fields.</li>
+        </ul>
+    </div>
+
+    <!-- Section 4 -->
+    <div class="section section-4">
+        <h2>🧪 My Test Case Writing Practice</h2>
+        <p>✓ I continued sharpening my software testing skills with a focus on writing detailed, high-quality test cases.</p>
+        <p>✓ This table provides a summary of the types of testing I practiced, with links to example test cases.</p>
+
+        <div class="table-wrapper">
+            <table>
+                <thead>
+                    <tr>
+                        <th>🚀 Feature</th>
+                        <th>✅ Type of Testing Practiced</th>
+                        <th>🔗 View Test Cases</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Login</td>
+                        <td><a href="https://pratiks-desk.site/test-cases/form/login_testcases/#sanity-testing">Sanity</a>, <a href="https://pratiks-desk.site/test-cases/form/login_testcases/#retesting">Retesting</a>, <a href="https://pratiks-desk.site/test-cases/form/login_testcases/#positive-testcases">Positive/Negative</a></td>
+                        <td><a href="https://pratiks-desk.site/test-cases/form/login_testcases/#testcases">Login Test Cases</a></td>
+                    </tr>
+                    <tr>
+                        <td>Registration</td>
+                        <td><a href="https://pratiks-desk.site/test-cases/form/registration_testcases/#smoke-testing">Smoke</a>, <a href="https://pratiks-desk.site/test-cases/form/registration_test
+                        <td>Registration</td>
+                        <td><a href="https://pratiks-desk.site/test-cases/form/registration_testcases/#smoke-testing">Smoke</a>, <a href="https://pratiks-desk.site/test-cases/form/registration_testcases/#regression-testing">Regression</a>, <a href="https://pratiks-desk.site/test-cases/form/registration_testcases/#end-to-end-testing">End-to-End</a></td>
+                        <td><a href="https://pratiks-desk.site/test-cases/form/registration_testcases/#testcases">Registration Test Cases</a></td>
+                    </tr>
+                    <tr>
+                        <td>Forgot Password</td>
+                        <td><a href="https://pratiks-desk.site/test-cases/form/registration_testcases/#regression">Regression</a>, <a href="https://pratiks-desk.site/test-cases/form/registration_testcases/#boundary-testing">Boundary Testing</a></td>
+                        <td><a href="https://pratiks-desk.site/test-cases/form/registration_testcases/#testcases">Forgot Password Test Cases</a></td>
+                    </tr>
+                    <tr>
+                        <td>Logout</td>
+                        <td><a href="https://pratiks-desk.site/test-cases/form/registration_testcases/#positive-testing">Positive/Negative</a></td>
+                        <td><a href="https://pratiks-desk.site/test-cases/form/registration_testcases/#testcases">Logout Test Cases</a></td>
+                    </tr>
+                    <tr>
+                        <td>Change Password</td>
+                        <td><a href="https://pratiks-desk.site/test-cases/form/registration_testcases/#retesting">Retesting</a>, <a href="https://pratiks-desk.site/test-cases/form/registration_testcases/#edge-case-testing">Edge Cases</a></td>
+                        <td><a href="https://pratiks-desk.site/test-cases/form/registration_testcases/#testcases">Change Password Test Cases</a></td>
+                    </tr>
+                    <tr>
+                        <td>User Profile</td>
+                        <td><a href="https://pratiks-desk.site/test-cases/form/registration_testcases/#ui-testing">UI Testing</a>, <a href="https://pratiks-desk.site/test-cases/form/registration_testcases/#functional-testing">Functional</a></td>
+                        <td><a href="https://pratiks-desk.site/test-cases/form/registration_testcases/#testcases">User Profile Test Cases</a></td>
+                    </tr>
+                    <tr>
+                        <td>Search Functionality</td>
+                        <td><a href="https://pratiks-desk.site/test-cases/form/registration_testcases/#end-to-end-testing">End-to-End</a>, <a href="https://pratiks-desk.site/test-cases/form/registration_testcases/#exploratory-testing">Exploratory</a></td>
+                        <td><a href="https://pratiks-desk.site/test-cases/form/registration_testcases/#testcases">Search Test Cases</a></td>
+                    </tr>
+                    <tr>
+                        <td>Dashboard</td>
+                        <td><a href="https://pratiks-desk.site/test-cases/form/registration_testcases/#sanity-testing">Sanity</a>, <a href="https://pratiks-desk.site/test-cases/form/registration_testcases/#role-based-testing">Role-Based Testing</a></td>
+                        <td><a href="https://pratiks-desk.site/test-cases/form/registration_testcases/#testcases">Dashboard Test Cases</a></td>
+                    </tr>
+                    <tr>
+                        <td>Form Submission</td>
+                        <td><a href="https://pratiks-desk.site/test-cases/form/registration_testcases/#input-validation">Input Validation</a>, <a href="https://pratiks-desk.site/test-cases/form/registration_testcases/#usability-testing">Usability</a></td>
+                        <td><a href="https://pratiks-desk.site/test-cases/form/registration_testcases/#testcases">Form Submission Test Cases</a></td>
+                    </tr>
+                    <tr>
+                        <td>Checkout & Payment</td>
+                        <td><a href="https://pratiks-desk.site/test-cases/form/registration_testcases/#integration-testing">Integration</a>, <a href="https://pratiks-desk.site/test-cases/form/registration_testcases/#regression">Regression</a>, <a href="https://pratiks-desk.site/test-cases/form/registration_testcases/#end-to-end-testing">E2E</a></td>
+                        <td><a href="https://pratiks-desk.site/test-cases/form/registration_testcases/#testcases">Checkout Test Cases</a></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <!-- Section 5 -->
+    <div class="section section-5">
+        <h2>📞 Contact Information</h2>
+        <p>Prepared by: <strong>Pratik Joshi</strong></p>
+        <p>You can reach me at <a href="mailto:connect.pratikjoshi@gmail.com">connect.pratikjoshi@gmail.com</a> or connect with me on <a href="https://www.linkedin.com/in/pratiks-desk/">LinkedIn</a>.</p>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>© 2025 Pratik Joshi | <a href="https://pratiks-desk.site">Visit my website</a></p>
+    </footer>
+</body>
+</html>
