@@ -181,3 +181,6 @@
 | E2E_TC_14 | Pagination through order list                     | View multiple orders                                                        | Correct pagination works                            | Low      |
 | E2E_TC_15 | Filtering products                                | Apply category filter                                                       | Filtered products shown                             | Medium   |
 ---
+
+**Prepared by:** [Pratik Joshi]   
+**Module:** File Upload & Download Testing
