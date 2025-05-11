@@ -57,5 +57,5 @@ Each test case includes a unique ID, description, step-by-step actions, expected
 | FUNC_TC_15 | Test profile data persists after relogin                   | Logout > Login again                                                       | Profile info should remain as updated                            | High     |
 
 ---
-Prepared By - **Vinayak D.**  
+Prepared By - **Pratik Joshi**  
 
