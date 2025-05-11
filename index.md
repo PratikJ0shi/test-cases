@@ -1,5 +1,4 @@
 # 📝 Software Testing Test Cases
-
 Welcome to my collection of practiced software testing test cases. This repository serves as a demonstration of different types of test cases, categorized for easy reference and understanding.
 
 ## 🔍 Types of Test-Cases Practiced
