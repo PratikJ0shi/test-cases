@@ -161,6 +161,51 @@
 
 ---
 
+# Change Password Test Cases
+
+Following testcases outlines the test cases for validating the **Change Password** functionality. The focus is on retesting the change password process after fixes or updates and testing edge cases that could cause issues in the password change flow.
+
+### Objective:
+To verify that the change password functionality works correctly under various scenarios, ensuring that users can change their passwords without errors, and edge cases are properly handled.
+
+---
+
+
+### Retesting Test Cases
+
+| TC ID          | Test Scenario                                 | Test Steps                                                             | Expected Result                                                   | Priority |
+|----------------|------------------------------------------------|------------------------------------------------------------------------|-------------------------------------------------------------------|----------|
+| RET_CK_01      | Verify successful password change             | 1. Login to the application. <br> 2. Go to change password page. <br> 3. Enter old password and new password. <br> 4. Save changes. | Password should be updated successfully, and user should be able to log in with the new password. | High     |
+| RET_CK_02      | Verify error message for incorrect old password | 1. Go to change password page. <br> 2. Enter incorrect old password and a new password. <br> 3. Save changes. | System should display an error message indicating incorrect old password. | High     |
+| RET_CK_03      | Verify successful password change with complex password | 1. Go to change password page. <br> 2. Enter old password and a new complex password (e.g., 12+ characters, mixed case, special characters). <br> 3. Save changes. | Complex password should be accepted, and user should be able to log in with the new password. | Medium   |
+| RET_CK_04      | Verify password change when the new password is the same as the old password | 1. Go to change password page. <br> 2. Enter old password and the same new password. <br> 3. Save changes. | System should notify the user that the new password cannot be the same as the old password. | Medium   |
+| RET_CK_05      | Verify password change flow after account lockout | 1. Lock the account by entering wrong passwords multiple times. <br> 2. Unlock the account. <br> 3. Change the password. | Password should be updated successfully after unlocking the account. | High     |
+| RET_CK_06      | Verify password change with password history enforcement | 1. Change the password to a new one. <br> 2. Try to set the new password to one used in the last X changes. | System should prevent using previously used passwords (if password history policy is enabled). | High     |
+| RET_CK_07      | Verify password change with minimal password length | 1. Go to change password page. <br> 2. Enter old password and a new password with minimal length (e.g., 6 characters). <br> 3. Save changes. | System should accept a password with the minimum required length. | Medium   |
+| RET_CK_08      | Verify password change with invalid characters | 1. Go to change password page. <br> 2. Enter old password and a new password with invalid characters (e.g., spaces, special chars not allowed). <br> 3. Save changes. | System should display an error for invalid characters in the new password. | High     |
+| RET_CK_09      | Verify password change after a session timeout | 1. Stay idle until the session times out. <br> 2. Try to change password after session timeout. | System should prompt the user to log in again before changing the password. | Medium   |
+| RET_CK_10      | Verify successful password change and session logout | 1. Change password successfully. <br> 2. Log out of the account. | User should be logged out and asked to log in with the new password. | High     |
+
+---
+
+### Edge Cases Test Cases
+
+| TC ID          | Test Scenario                                 | Test Steps                                                             | Expected Result                                                   | Priority |
+|----------------|------------------------------------------------|------------------------------------------------------------------------|-------------------------------------------------------------------|----------|
+| EDGE_CK_01     | Verify password change when no old password is provided | 1. Go to change password page. <br> 2. Leave old password field empty and enter a new password. <br> 3. Save changes. | System should display an error that the old password is required. | High     |
+| EDGE_CK_02     | Verify password change with very long old or new password | 1. Go to change password page. <br> 2. Enter an old password and a new password with extreme length (e.g., 100 characters). <br> 3. Save changes. | System should accept or reject based on max password length policy. | Medium   |
+| EDGE_CK_03     | Verify password change when account is temporarily suspended | 1. Suspend the user account. <br> 2. Attempt to change password while suspended. | System should prevent password change and display account suspension message. | High     |
+| EDGE_CK_04     | Verify password change for a user with a long username | 1. Go to change password page. <br> 2. Enter old password and new password for a user with a long username (e.g., 50+ characters). | System should not break the layout or functionality when the username is too long. | Medium   |
+| EDGE_CK_05     | Verify password change when the server is under heavy load | 1. Simulate server load. <br> 2. Attempt to change password during high server load. | Password change should either complete successfully or show an appropriate error message indicating a delay. | High     |
+| EDGE_CK_06     | Verify password change for a user with multiple open sessions | 1. Log in on multiple devices or tabs. <br> 2. Change password on one session. <br> 3. Check other sessions. | Other sessions should be logged out after password change. | High     |
+| EDGE_CK_07     | Verify password change when special characters are used | 1. Go to change password page. <br> 2. Enter old password and new password with special characters (e.g., @, #, $, etc.). <br> 3. Save changes. | System should accept valid special characters or show an error if any are disallowed. | Medium   |
+| EDGE_CK_08     | Verify password change after system maintenance | 1. Attempt to change password while system maintenance is ongoing. | User should be notified that the system is under maintenance and unable to process the request. | High     |
+| EDGE_CK_09     | Verify password change when multiple users are changing passwords simultaneously | 1. Simultaneously change passwords for two users. <br> 2. Verify both changes are successful. | Both users should be able to change their passwords independently without issues. | High     |
+| EDGE_CK_10     | Verify password change when browser cookies are disabled | 1. Disable cookies in the browser. <br> 2. Attempt to change password. | System should either allow password change or prompt the user to enable cookies for session management. | Medium   |
+
+
+---
+
 ## E2E 
 
 | TC ID      | Test Scenario                          | Test Steps                                         | Expected Result                    | Priority |
