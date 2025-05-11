@@ -1,4 +1,10 @@
-### Testcases
+# Forgot Password Test Cases
+
+## Introduction
+
+Forgot password testing ensures that users who have lost access to their credentials can securely and effectively reset their passwords. It validates that the process is functional, intuitive, and secure, without exposing sensitive data. Regression tests confirm system stability after changes, while boundary tests check how the system behaves at input and process limits.
+
+---
 
 ## forgot_password_testcases
 ---
@@ -66,9 +72,6 @@
 | TC_SM_15  | Footer and header load correctly         | Visit multiple pages                                                         | Footer and header are consistent                                | Low      |
 
 
-
-
-
 -----------–--
 ## sanity
 
@@ -111,29 +114,44 @@
 | TC_RT_14  | Email not received – re-request OTP      | Request OTP again                                                            | OTP received                                                     | High     |
 | TC_RT_15  | Form submission failed – retry           | Resubmit feedback/contact form                                               | Form submitted successfully                                      | Medium   |
 
---------–--
-## regression
+---
 
-| TC ID     | Test Scenario                          | Test Steps                                                                   | Expected Result                                                  | Priority |
-|-----------|-----------------------------------------|-------------------------------------------------------------------------------|------------------------------------------------------------------|----------|
-| TC_RG_01  | Existing login functionality             | Test login after new feature deployment                                      | Login still works                                                | High     |
-| TC_RG_02  | Registration still functional            | Register user post major update                                              | Account created                                                  | High     |
-| TC_RG_03  | Add to cart works after updates          | Add item to cart post DB changes                                             | Item added successfully                                          | High     |
-| TC_RG_04  | Cart persists on refresh                 | Refresh after cart action                                                    | Cart retains added items                                         | Medium   |
-| TC_RG_05  | Payment workflow after gateway patch     | Make a payment                                                               | Transaction completes                                             | High     |
-| TC_RG_06  | Forgot password after changes            | Reset password                                                               | Reset process works as before                                    | High     |
-| TC_RG_07  | Search works after filter changes        | Search product                                                               | Search results accurate                                           | Medium   |
-| TC_RG_08  | Profile update not broken                | Edit profile info                                                            | Changes saved correctly                                           | Medium   |
-| TC_RG_09  | Order history loads after new feature    | Check order history page                                                     | Orders load properly                                              | Medium   |
-| TC_RG_10  | Logout remains functional                | Logout from dashboard                                                        | Session ends correctly                                            | High     |
-| TC_RG_11  | Notifications work after UI changes      | Trigger actions to show messages                                             | Toasts/alerts shown correctly                                     | Low      |
-| TC_RG_12  | Sorting is unaffected                    | Use sort function                                                            | Items sorted as expected                                          | Medium   |
-| TC_RG_13  | Password change secure                   | Update password                                                              | Password updated securely                                         | Medium   |
-| TC_RG_14  | File upload not broken                   | Upload a document                                                            | Upload works successfully                                         | Medium   |
-| TC_RG_15  | Pagination works on product list         | Browse next/prev pages                                                       | Pages load correctly                                              | Medium   |
+## Regression Test Cases
+
+| TC ID      | Test Case Description                     | Test Steps                                        | Expected Result                        | Priority |
+| ---------- | ----------------------------------------- | ------------------------------------------------- | -------------------------------------- | -------- |
+| RP\_TC\_01 | Verify navigation to Forgot Password page | Click on 'Forgot Password' link from login screen | Forgot Password page is displayed      | High     |
+| RP\_TC\_02 | Submit valid email for password reset     | Enter registered email and submit                 | Reset email sent successfully          | High     |
+| RP\_TC\_03 | Submit unregistered email                 | Enter unregistered email and submit               | Appropriate error message displayed    | High     |
+| RP\_TC\_04 | Submit empty email field                  | Leave email blank and submit                      | Validation error message shown         | Medium   |
+| RP\_TC\_05 | Check reset link validity                 | Click the reset link received in email            | User redirected to reset password page | High     |
+| RP\_TC\_06 | Check expired reset link                  | Use a link older than 24 hours                    | Expired link error message shown       | Medium   |
+| RP\_TC\_07 | Password reset confirmation               | Enter new password and confirm                    | Password updated successfully          | High     |
+| RP\_TC\_08 | Try reusing used reset link               | Use same link again                               | Link marked invalid or expired         | Medium   |
+| RP\_TC\_09 | Verify login after reset                  | Login with new password                           | Login successful                       | High     |
+| RP\_TC\_10 | Verify login fails with old password      | Attempt login with old password                   | Login fails with incorrect credentials | High     |
+
+---
 
 
-----------
+## Boundary Test Cases
+
+| TC ID      | Test Case Description                     | Test Steps                                               | Expected Result                     | Priority |
+| ---------- | ----------------------------------------- | -------------------------------------------------------- | ----------------------------------- | -------- |
+| BP\_TC\_01 | Email field with max valid characters     | Enter 254-character email address                        | Accepted and processed              | Medium   |
+| BP\_TC\_02 | Email field with 1 character before '@'   | Enter minimal valid email like [a@b.com](mailto:a@b.com) | Email accepted                      | Low      |
+| BP\_TC\_03 | Email without '@' symbol                  | Enter string without @                                   | Error message shown                 | Medium   |
+| BP\_TC\_04 | Email with special characters             | Enter email with allowed special characters              | Email accepted                      | Medium   |
+| BP\_TC\_05 | Submit reset with leading/trailing spaces | Enter email with spaces                                  | Email trimmed and accepted          | Medium   |
+| BP\_TC\_06 | Enter mismatched passwords                | Enter different passwords in reset form                  | Error shown                         | High     |
+| BP\_TC\_07 | Submit reset with weak password           | Use '123' as new password                                | Weak password warning displayed     | Medium   |
+| BP\_TC\_08 | Submit reset with long password           | Enter 100-character password                             | Password accepted (if limit allows) | Low      |
+| BP\_TC\_09 | Submit reset with empty new password      | Leave password fields blank                              | Error message displayed             | High     |
+| BP\_TC\_10 | Copy-paste same password in both fields   | Copy-paste matching passwords                            | Password successfully updated       | Medium   |
+
+---
+
+
 ## e2e
 
 | TC ID     | Test Scenario                          | Test Steps                                                                   | Expected Result                                                  | Priority |
