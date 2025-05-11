@@ -11,6 +11,8 @@ Each test case includes the test scenario, detailed test steps, sample test data
 - Validate user experience elements like error messages, form layout, accessibility, and responsiveness.
 - Test for edge cases, security vulnerabilities (e.g., SQL Injection, XSS), and usability issues.
 
+---
+
 Use these test cases to create a strong foundation for your QA portfolio, test documentation, or automation coverage.
 
 | **TC ID** | **Test Scenario**                                    | **Test Steps**                                                     | **Test Data**                        | **Expected Result**                                      | **Priority** |
@@ -66,6 +68,8 @@ Use these test cases to create a strong foundation for your QA portfolio, test d
 | TC049     | Validate dynamic form field visibility               | Trigger field visibility (e.g. toggle “Other”)                    | Select “Other”                       | Related input field appears                               | Medium       |
 | TC050     | Test form submission in multiple tabs                | Open same form in multiple tabs                                    | Submit from both                     | Should prevent duplicates                                 | Medium       |
 
+---
+
 ## Conclusion
 
 The above 50 test cases provide comprehensive coverage of the critical aspects involved in form validation and behavior testing. By systematically executing these cases, testers can ensure that the form is reliable, secure, user-friendly, and robust against both typical and edge-case inputs.
@@ -76,6 +80,8 @@ For further enhancements, consider:
 - Adding browser-specific form behavior test cases
 - Expanding with negative testing scenarios
 - Including API-level validation if the form is integrated with backend services
+- 
+---
 
 Prepared by: [Pratik Joshi]  
 Project/Module: Form Functionality Testing
