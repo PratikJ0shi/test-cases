@@ -200,3 +200,5 @@ End-to-End testing ensures that the entire registration process works as expecte
 | 5             | Verify successful registration and confirmation email            | None                                 | 1. Fill in valid registration data. <br> 2. Submit the form. <br> 3. Check the email inbox for confirmation.    | User should receive a confirmation email.                       |
 
 ---
+**Prepared by:** [Pratik Joshi]   
+**Module:** | Form Testing | registration-testcases |
