@@ -141,7 +141,7 @@ Retesting focuses on verifying that a defect has been fixed in the system, confi
 
 ---
 
-## regression
+## 🔁 Regression Test Cases
 Regression testing ensures that the system still functions as expected after updates or fixes.
 
 | Test Case No. | Test Case Description                                             | Precondition                         | Test Steps                                                                                                      | Expected Result                                                  |
@@ -164,27 +164,22 @@ Regression testing ensures that the system still functions as expected after upd
 
 
 ---
+## 🔥 Smoke Test Cases
 
-## smoke
 Smoke testing ensures that basic functionalities are working before more extensive testing is done.
 
-| Test Case No. | Test Case Description                                              | Precondition                         | Test Steps                                                                                                      | Expected Result                                                  |
-|---------------|--------------------------------------------------------------------|--------------------------------------|-----------------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------|
-| 1             | Verify registration page loads correctly                           | None                                 | 1. Navigate to the registration page URL.                                                                        | Page should load without errors.                                |
-| 2             | Verify presence of mandatory fields                               | Registration page is loaded          | 1. Check that fields such as Name, Email, Password, Confirm Password are present.                               | Mandatory fields should be present.                             |
-| 3             | Verify successful form submission with valid data                 | All required fields are filled       | 1. Enter valid data in all required fields. <br> 2. Click 'Submit'.                                              | Registration should be successful and user should be redirected.|
-| 4             | Verify invalid email format handling                              | Email field is visible               | 1. Enter an invalid email (e.g., "invalid.com"). <br> 2. Click 'Submit'.                                        | Error message should show for invalid email.                   |
-| 5             | Verify password mismatch warning                                  | Password and Confirm Password fields | 1. Enter mismatched passwords in the Password and Confirm Password fields. <br> 2. Click 'Submit'.              | Password mismatch error message should appear.                 |
-| 6             | Verify reset functionality works                                  | None                                 | 1. Fill out data in some fields. <br> 2. Click 'Reset'.                                                           | All fields should be cleared.                                   |
-| 7             | Verify the form fields are reset when 'Cancel' is clicked          | None                                 | 1. Enter some data. <br> 2. Click the 'Cancel' button.                                                           | Fields should be cleared and form should be reset.              |
-| 8             | Verify that the form does not submit with missing required fields | Required fields are left empty       | 1. Leave required fields empty (e.g., Name or Email). <br> 2. Click 'Submit'.                                    | Error message should show for missing required fields.         |
-| 9             | Verify the 'Submit' button functionality                           | Form is filled with valid data       | 1. Complete all fields with valid data. <br> 2. Click 'Submit'.                                                 | Form should submit successfully.                                 |
-| 10            | Verify successful registration after entering valid credentials   | Valid data is entered                | 1. Enter valid credentials (e.g., Name, Email, Password). <br> 2. Click 'Submit'.                               | User should be successfully registered.                         |
-| 11            | Verify page is responsive on different devices                     | None                                 | 1. Open the registration page on different devices (desktop, tablet, mobile).                                  | Page should be responsive across devices.                      |
-| 12            | Verify user redirection to success page after registration        | Registration is successful           | 1. Complete the registration form. <br> 2. Submit the form. <br> 3. Check if the user is redirected to a confirmation page. | User should be redirected to confirmation page.                 |
-| 13            | Verify error messages for incorrect input                          | Invalid data is entered              | 1. Enter invalid input (e.g., empty fields, incorrect email format). <br> 2. Submit the form.                   | Error message should be displayed for incorrect input.         |
-| 14            | Verify all form fields are accessible and interactable            | None                                 | 1. Open the registration form and check if all fields are accessible (Name, Email, Password).                   | All fields should be accessible.                                |
-| 15            | Verify that the system does not crash during form submission      | None                                 | 1. Fill the form with valid data. <br> 2. Submit the form.                                                      | No system crash should occur during form submission.            |
+| TC ID     | Test Case Description                              | Test Steps                                                     | Expected Result                                     | Priority |
+|-----------|----------------------------------------------------|----------------------------------------------------------------|-----------------------------------------------------|----------|
+| SMO_REG_01 | Verify registration page loads                     | Open registration page                                         | Form is displayed                                   | High     |
+| SMO_REG_02 | All mandatory fields are visible                   | Check UI                                                       | Required fields shown                               | High     |
+| SMO_REG_03 | Submit with valid details                          | Fill & submit form                                             | User created                                        | High     |
+| SMO_REG_04 | Email field accepts correct format                 | Input valid email                                              | Accepted                                            | High     |
+| SMO_REG_05 | Password fields validate correctly                 | Enter passwords                                                | Rules applied correctly                             | High     |
+| SMO_REG_06 | Confirm password match validation                  | Mismatch passwords                                             | Error shown                                         | Medium   |
+| SMO_REG_07 | Submit with optional fields                        | Fill optional + mandatory fields                               | Registration accepted                               | Medium   |
+| SMO_REG_08 | Button enabled only after filling required fields  | Try submit with empty fields                                   | Button disabled until valid                         | Medium   |
+| SMO_REG_09 | Form does not accept empty submission              | Submit without filling                                         | Validation triggered                                | Medium   |
+| SMO_REG_10 | System redirects to login after registration       | Register > Check redirect                                      | Navigated to login page                             | Medium   |
 
 ---
 
