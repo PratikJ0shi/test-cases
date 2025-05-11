@@ -1,3 +1,18 @@
+# Change Password Testing
+
+## Introduction
+
+**Change Password** functionality is a critical feature in any web or mobile application. It allows users to update their credentials for enhanced security and account management. Ensuring that the change password process works smoothly is crucial to providing a secure user experience. This functionality should be tested thoroughly to ensure that it works under a variety of conditions, including typical use cases and edge scenarios.
+
+The goal of **Change Password Testing** is to verify that users can update their password securely, the system performs the necessary validations, and that any issues such as errors or security flaws are identified and addressed. This includes testing for common password policies (such as minimum length, complexity, etc.), error messages for invalid inputs, as well as testing the functionality in scenarios such as when an account is locked, password history is enforced, or the system is under heavy load.
+
+### Key Objectives:
+- Ensure the change password process is user-friendly, accurate, and secure.
+- Verify that the system responds correctly to various edge cases (e.g., invalid inputs, server issues).
+- Ensure that security protocols are followed, such as invalidating old passwords and updating session tokens after a successful password change.
+
+---
+
 ## change_password_testcases
 
 ---
