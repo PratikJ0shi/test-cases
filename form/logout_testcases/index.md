@@ -1,3 +1,25 @@
+| TC No. | Test Case Description                          | Steps                                                                 | Expected Result                                                        | Priority |
+|--------|------------------------------------------------|------------------------------------------------------------------------|------------------------------------------------------------------------|----------|
+| TC01   | Successful Logout                              | Login → Click Logout                                                  | User is logged out and redirected to login page.                       | High     |
+| TC02   | Session Termination                            | Logout → Try accessing a secure page via browser history              | Redirects to login page (session expired).                             | High     |
+| TC03   | Logout from Header/Menu                        | Click Logout from top menu                                            | User is logged out correctly.                                          | High     |
+| TC04   | Logout Button Clickable                        | Observe Logout button                                                 | Button is enabled and clickable.                                       | Medium   |
+| TC05   | Logout Confirmation Prompt                     | Click Logout                                                          | Confirmation popup appears (Yes/No).                                   | Medium   |
+| TC06   | Cancel Logout                                  | Click Logout → Cancel on confirmation                                 | User remains logged in.                                                | Low      |
+| TC07   | Auto Logout after Inactivity                   | Stay idle for session timeout duration                                | User is automatically logged out.                                      | High     |
+| TC08   | Logout from One Device Doesn’t Affect Another | Login from 2 devices → Logout from one                                | Second session stays active (if supported).                            | Medium   |
+| TC09   | Logout from All Devices                        | Click “Logout from all devices”                                       | All active sessions are terminated.                                    | Medium   |
+| TC10   | Direct Access After Logout                     | Logout → Enter dashboard URL manually                                 | Redirects to login page.                                               | High     |
+| TC11   | Logout Button Placement                        | Check Logout button location                                          | Clearly visible in UI header/menu.                                     | Medium   |
+| TC12   | Logout Icon Display                            | Observe logout icon (if used)                                         | Proper icon aligned with logout label.                                 | Low      |
+| TC13   | Responsive Behavior                            | Open on mobile/tablet view                                            | Logout button accessible and visible.                                  | Medium   |
+| TC14   | Logout Without Login                           | Access logout URL directly                                            | Redirects to login page or error message shown.                        | High     |
+| TC15   | Broken Session Handling                        | Modify session token manually → Click logout                          | Logout fails gracefully with proper message.                           | Medium   |
+| TC16   | Browser Back After Logout                      | Logout → Click browser back                                           | No access to previous page, stays on login screen.                     | High     |
+| TC17   | Logout and Cache                               | Logout → Reopen tab                                                   | No user data visible; session is cleared.                              | High     |
+| TC18   | Browser Refresh After Logout                   | Logout → Refresh page                                                 | Remains on login page.                                                 | High     |
+| TC19   | Logout One User and Login Another              | User A logs out → User B logs in                                      | No session conflict or data leakage.                                   | Medium   |
+| TC20   | Concurrent Logout While Performing Action      | Logout from another tab → Try submitting form                         | Action blocked, redirected to login page.                              | High     |
 
 ---
 # logout_test_cases
