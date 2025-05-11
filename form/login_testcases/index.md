@@ -231,6 +231,5 @@ This document contains **15 detailed test cases each** for the following types o
 | E2E_15    | Login → Navigate tabs → Logout    | Log in → Browse various app tabs → Logout                            | All transitions smooth, ends with logout            |
 
 ---
-
 **Prepared by:** [Pratik Joshi]   
-**Module:** Form Testing
+**Module:** | Form Testing | login-testcases |
