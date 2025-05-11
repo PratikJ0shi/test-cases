@@ -76,7 +76,30 @@
 | NEG019  | Logout Link Redirects to Wrong Page            | Misconfigured logout → Redirects to wrong path                   | Bug detected; should go to login.                               | High     |
 | NEG020  | Logout Button Missing                          | Logout not present in UI                                         | Critical issue; fails UI/UX test.                               | High     |
 
--------
+---
+## sanity
+
+| SAN_ID | Test Case Description                                        | Test Steps                                                                                                           | Expected Outcome                                                                 | Priority |
+|--------|--------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------|----------|
+| S1     | Verify if the logout button is visible on the application.   | 1. Open the application.<br>2. Navigate to the logout area.<br>3. Check visibility.                                 | Logout button should be visible in the header/footer.                           | High     |
+| S2     | Verify if the user can successfully click on the logout.     | 1. Open the application.<br>2. Locate the logout button.<br>3. Click it.                                            | Upon clicking, the user should be logged out.                                   | High     |
+| S3     | Check if logout redirects to login page.                     | 1. Click logout button.<br>2. Observe page redirection.                                                             | User should be redirected to login page.                                        | High     |
+| S4     | Verify session is destroyed after logout.                    | 1. Logout.<br>2. Try accessing authenticated page.                                                                   | Session should not be active.                                                   | High     |
+| S5     | Ensure login page is shown after logout.                     | 1. Click logout.<br>2. Observe login screen.                                                                         | Login page should display credentials fields.                                   | Medium   |
+| S6     | User cannot access dashboard after logout.                   | 1. Logout.<br>2. Access dashboard via URL.                                                                           | Should show login screen.                                                       | High     |
+| S7     | No personal info retained after logout.                      | 1. Logout.<br>2. Check login screen.                                                                                 | No personal data should be visible.                                             | Medium   |
+| S8     | Logout across all open tabs.                                 | 1. Open multiple tabs.<br>2. Logout in one.<br>3. Check others.                                                      | User should be logged out everywhere.                                           | High     |
+| S9     | Logout button responsive on all devices.                     | 1. Open on mobile/tablet/desktop.<br>2. Test logout.                                                                 | Logout button should function on all screen sizes.                              | High     |
+| S10    | Logout from integrated services.                             | 1. Logout.<br>2. Check logout from Google/Facebook, etc.                                                             | Should logout from third-party services.                                        | Medium   |
+| S11    | Confirmation prompt before logout.                           | 1. Click logout.<br>2. Look for confirmation.                                                                        | A message/dialog may appear before logout.                                      | Low      |
+| S12    | Logout with multiple active sessions.                        | 1. Login on multiple devices.<br>2. Logout from one.                                                                 | Should logout from all.                                                         | High     |
+| S13    | Back button after logout shows login page.                   | 1. Logout.<br>2. Press browser back button.                                                                          | Should not access previous authenticated page.                                  | Low      |
+| S14    | Session token invalidated after logout.                      | 1. Logout.<br>2. Reuse old token.                                                                                    | Token should not work.                                                          | Medium   |
+| S15    | No error on repeated logout attempts.                        | 1. Logout multiple times.                                                                                           | No errors should occur.                                                         | Low      |
+
+
+---
+
 ## retest
 
 | **Test Case ID** | **Test Case Description**                                  | **Test Steps**                                                                                                                                               | **Expected Outcome**                                       | **Priority** |
