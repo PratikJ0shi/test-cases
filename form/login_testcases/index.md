@@ -100,6 +100,26 @@ This document includes **20 positive** and **20 negative** test cases for valida
 
 ---
 
+## ✅ Positive & ❌ Negative Test Cases
+
+| TC ID     | Test Case Description                              | Test Steps                                                     | Expected Result                                     | Priority |
+|-----------|----------------------------------------------------|----------------------------------------------------------------|-----------------------------------------------------|----------|
+| POS_LOGIN_01 | Login with correct username & password            | Enter valid credentials                                        | User logged in                                      | High     |
+| POS_LOGIN_02 | Check login via keyboard Enter key                | Fill fields > Press Enter key                                  | Form submits successfully                           | Medium   |
+| POS_LOGIN_03 | Login after reset password                        | Reset password > Try new password                              | Login succeeds                                      | High     |
+| POS_LOGIN_04 | Login on mobile view                              | Use mobile view to login                                       | Responsive layout, successful login                 | Medium   |
+| POS_LOGIN_05 | Verify session creation                           | Login > Inspect cookies/session                                | Session created                                     | Medium   |
+
+| NEG_LOGIN_01 | Login with wrong password                         | Enter valid username + wrong password                          | Error shown                                         | High     |
+| NEG_LOGIN_02 | Login with unregistered user                      | Enter non-existent credentials                                 | Error: Invalid user                                 | High     |
+| NEG_LOGIN_03 | Submit login form with empty fields               | Click login with blank form                                    | Validation errors displayed                         | Medium   |
+| NEG_LOGIN_04 | Enter script as input (XSS check)                 | Inject `<script>` in username/password                         | Input sanitized, no script executed                 | High     |
+| NEG_LOGIN_05 | Login with SQL injection attempt                  | Enter `admin' OR '1'='1` as input                              | Input rejected, no access granted                   | High     |
+
+---
+
+---
+
 
 # Login Module - Categorized Test Cases (Detailed)
 
@@ -112,27 +132,22 @@ This document contains **15 detailed test cases each** for the following types o
 
 ---
 
-## sanity
+## 🔄 Sanity Test Cases
 
 > Quick checks after each build to verify core functionality before proceeding to deeper testing.
 
-| TC ID     | Title                             | Steps                                                                 | Expected Result                                      |
-|-----------|-----------------------------------|-----------------------------------------------------------------------|------------------------------------------------------|
-| SAN_01    | Launch application                | Open the URL or app                                                  | Login screen loads without error                    |
-| SAN_02    | UI Elements present               | Check email, password fields and login button                        | All elements are visible and aligned                |
-| SAN_03    | Email input functional            | Type text in email field                                             | Text appears correctly                              |
-| SAN_04    | Password input functional         | Type text in password field                                          | Text is masked and appears correctly                |
-| SAN_05    | Login button enabled              | Fill valid inputs                                                    | Login button becomes clickable                      |
-| SAN_06    | Login button disabled             | Leave inputs empty                                                   | Login button stays disabled                         |
-| SAN_07    | Click Login                       | Enter valid credentials, click login                                 | User redirected to dashboard                        |
-| SAN_08    | Error on empty email              | Leave email empty, click login                                       | "Email is required" error shown                     |
-| SAN_09    | Error on empty password           | Leave password empty, click login                                    | "Password is required" error shown                  |
-| SAN_10    | Show/Hide Password toggle         | Click on eye icon in password field                                  | Toggles visibility                                  |
-| SAN_11    | Forgot password link present      | Check below password field                                           | "Forgot Password?" is visible and clickable         |
-| SAN_12    | Page loads under 3 seconds        | Refresh login page                                                   | Loads within performance threshold                  |
-| SAN_13    | Tab order navigation              | Use tab key on keyboard                                              | Focus moves field-by-field logically                |
-| SAN_14    | Label alignment                   | Check labels for each field                                          | Labels aligned to respective input fields           |
-| SAN_15    | Field placeholders visible        | Check input fields                                                   | Placeholders like "Enter Email" are visible         |
+| TC ID     | Test Case Description                              | Test Steps                                                     | Expected Result                                     | Priority |
+|-----------|----------------------------------------------------|----------------------------------------------------------------|-----------------------------------------------------|----------|
+| SAN_LOGIN_01 | Verify login page loads                          | Navigate to login URL                                          | Login form is displayed                             | High     |
+| SAN_LOGIN_02 | Check presence of username & password fields     | Open login page                                                | Username and Password fields are visible            | High     |
+| SAN_LOGIN_03 | Check login button is enabled                    | Enter credentials                                              | Login button should be clickable                    | High     |
+| SAN_LOGIN_04 | Verify login with valid credentials              | Enter valid credentials > Click login                         | User is redirected to dashboard                     | High     |
+| SAN_LOGIN_05 | Verify logout button after login                 | Login > Check for logout                                       | Logout button should appear                         | Medium   |
+| SAN_LOGIN_06 | Check password field is masked                   | Type in password                                               | Input should be masked                              | Medium   |
+| SAN_LOGIN_07 | Check form does not submit empty                 | Leave fields blank > Click login                               | Error messages shown                                | Medium   |
+| SAN_LOGIN_08 | Verify login redirects to dashboard              | Login with valid credentials                                   | Navigates to dashboard                              | High     |
+| SAN_LOGIN_09 | Verify 'Remember Me' checkbox                    | Check/uncheck Remember Me                                      | Session persists as expected                        | Medium   |
+| SAN_LOGIN_10 | Check login page on refresh                      | Refresh after entering details                                 | Login page reloads cleanly                          | Low      |
 
 ---
 
@@ -160,27 +175,23 @@ This document contains **15 detailed test cases each** for the following types o
 
 ---
 
-## retesting
+## 🔁 Retesting Test Cases
 
 > Re-execution of failed test cases after defect fixes.
 
-| TC ID     | Title                             | Steps                                                                 | Expected Result                                      |
-|-----------|-----------------------------------|-----------------------------------------------------------------------|------------------------------------------------------|
-| RET_01    | Correct error on invalid login    | Enter wrong password                                                 | Proper error shown                                  |
-| RET_02    | Password reset sends email        | Enter valid registered email on reset page                           | Reset email received                                |
-| RET_03    | Forgot password flow fixed        | Follow full reset flow after bug fix                                 | Password reset and login successful                 |
-| RET_04    | Empty input validation works      | Submit form with empty fields                                        | Required field error shown                          |
-| RET_05    | SQL injection blocked             | Enter `' OR 1=1 --` in fields                                        | Login fails, inputs sanitized                       |
-| RET_06    | Special characters accepted       | Enter complex but valid password                                     | Login succeeds                                      |
-| RET_07    | Browser compatibility             | Run login on Safari/Edge                                             | All steps work the same                             |
-| RET_08    | UI alignment fixed                | Check field alignment after layout bug                               | All elements aligned correctly                      |
-| RET_09    | Email trimming implemented        | Enter email with spaces                                              | Spaces trimmed automatically                        |
-| RET_10    | Login with changed password       | Reset password → Try logging in                                      | Login successful                                    |
-| RET_11    | Field validation message updated  | Enter invalid email                                                  | New validation message displayed                    |
-| RET_12    | Redirect bug fixed                | Access dashboard unauthenticated                                     | Redirects to login page                             |
-| RET_13    | Session expiry issue resolved     | Wait beyond timeout                                                  | Auto logout works                                   |
-| RET_14    | Click login twice issue fixed     | Double click login                                                   | Single request processed                            |
-| RET_15    | Password length enforcement       | Try short password                                                   | Validation triggers appropriately                   |
+
+| TC ID     | Test Case Description                              | Test Steps                                                     | Expected Result                                     | Priority |
+|-----------|----------------------------------------------------|----------------------------------------------------------------|-----------------------------------------------------|----------|
+| RE_LOGIN_01 | Re-login after logout                             | Login > Logout > Login again                                   | User logs in successfully                           | High     |
+| RE_LOGIN_02 | Retest with wrong password after failure          | Enter wrong password > Then correct one                        | Access granted with correct credentials             | High     |
+| RE_LOGIN_03 | Retest failed login attempts                      | Try invalid logins > Then valid                                | Valid login succeeds                                | Medium   |
+| RE_LOGIN_04 | Retest session timeout                            | Let session expire > Try login again                           | Session restarts properly                           | Medium   |
+| RE_LOGIN_05 | Retry login after CAPTCHA failure                 | Fail CAPTCHA > Pass CAPTCHA                                    | Login works post-validation                         | Medium   |
+| RE_LOGIN_06 | Recheck field validations                         | Leave fields blank multiple times                              | Error messages shown each time                      | Medium   |
+| RE_LOGIN_07 | Retest Remember Me after logout                   | Check Remember Me > Logout > Reopen app                        | Session handled appropriately                       | Low      |
+| RE_LOGIN_08 | Retry login after password reset                  | Reset password > Try login with new                            | Login successful                                    | High     |
+| RE_LOGIN_09 | Re-login on different device                      | Login > Logout > Login from new device                         | Credentials work                                    | Medium   |
+| RE_LOGIN_10 | Retest redirect after login                       | Login > Ensure redirect to home/dashboard                      | Correct page shown                                  | Medium   |
 
 ---
 
