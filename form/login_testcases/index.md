@@ -233,4 +233,4 @@ This document contains **15 detailed test cases each** for the following types o
 ---
 
 **Prepared by:** [Pratik Joshi]   
-**Module:** File Upload & Download Testing
+**Module:** Form Testing
