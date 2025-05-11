@@ -52,6 +52,7 @@
 ---
 
 ## negative
+
 | NEG_ID  | Test Case Description                          | Steps                                                            | Expected Result                                                   | Priority |
 |---------|------------------------------------------------|------------------------------------------------------------------|------------------------------------------------------------------|----------|
 | NEG001  | Logout Without Login                           | Directly access logout URL without login                         | Redirects to login or error shown.                              | High     |
@@ -78,23 +79,23 @@
 
 ------
 ## sanity
-| **Test Case ID** | **Test Case Description**                                  | **Test Steps**                                                                                                                                               | **Expected Outcome**                                       | **Priority** |
+| **SAN_ID** | **Test Case Description**                                  | **Test Steps**                                                                                                                                               | **Expected Outcome**                                       | **Priority** |
 |------------------|------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------|-----------------------------------------------------------|--------------|
-| S1               | Verify if the logout button is visible on the application. | 1. Open the application. <br> 2. Navigate to the page with the logout button. <br> 3. Check if the logout button is visible. | Logout button should be visible in the header/footer.      | High         |
-| S2               | Verify if the user can successfully click on the logout button. | 1. Open the application. <br> 2. Locate the logout button. <br> 3. Click the logout button. | Upon clicking the logout button, the user should be logged out. | High         |
-| S3               | Check if the logout process redirects to the login page.  | 1. Click the logout button. <br> 2. Observe the page transition. | User should be redirected to the login page after logout. | High         |
-| S4               | Verify that the session is destroyed after logout.       | 1. Click the logout button. <br> 2. Try to access the dashboard or another authenticated page. | After logout, the user session should no longer be active. | High         |
+| S1          | Verify if the logout button is visible on the application. | 1. Open the application. <br> 2. Navigate to the page with the logout button. <br> 3. Check if the logout button is visible. | Logout button should be visible in the header/footer.      | High         |
+| S2          | Verify if the user can successfully click on the logout button. | 1. Open the application. <br> 2. Locate the logout button. <br> 3. Click the logout button. | Upon clicking the logout button, the user should be logged out. | High         |
+| S3          | Check if the logout process redirects to the login page.  | 1. Click the logout button. <br> 2. Observe the page transition. | User should be redirected to the login page after logout. | High         |
+| S4          | Verify that the session is destroyed after logout.       | 1. Click the logout button. <br> 2. Try to access the dashboard or another authenticated page. | After logout, the user session should no longer be active. | High         |
 | S5               | Ensure that the login page is displayed after logout.     | 1. Click the logout button. <br> 2. Verify that the login page appears with fields to re-enter credentials. | Login page should display with fields to re-enter credentials. | Medium       |
-| S6               | Verify that the user cannot access the dashboard after logout. | 1. Logout from the application. <br> 2. Try to access the dashboard directly via URL. | Trying to access the dashboard after logout should show a login screen. | High         |
-| S7               | Ensure that no personal information is retained after logout. | 1. Logout from the application. <br> 2. Verify that no personal information is displayed on the login page. | No personal data should be available after logout.         | Medium       |
-| S8               | Verify that clicking logout logs the user out across all open tabs. | 1. Open multiple tabs in the browser. <br> 2. Click the logout button in one tab. <br> 3. Check the other tabs to verify logout. | User should be logged out from all active browser tabs.    | High         |
-| S9               | Ensure the logout button works across all screen sizes.   | 1. Open the application on different devices (desktop, tablet, mobile). <br> 2. Check if the logout button is functional on each device. | Logout button should work seamlessly on desktop and mobile. | High         |
-| S10              | Verify that clicking logout logs the user out of integrated services. | 1. Logout from the application. <br> 2. Check if the user is logged out from integrated services (e.g., Google, Facebook). | User should be logged out from third-party services integrated into the app. | Medium       |
-| S11              | Check if the system provides any confirmation for logging out. | 1. Click the logout button. <br> 2. Check if there is a confirmation dialog before logout. | System may display a confirmation message before logging out. | Low          |
-| S12              | Verify logout behavior when multiple sessions are active. | 1. Log in to the application on multiple devices or browsers. <br> 2. Click the logout button on one device. | User should be logged out of all active sessions.           | High         |
-| S13              | Ensure that after logout, clicking the back button shows the login page. | 1. Logout from the application. <br> 2. Click the browser’s back button. | Clicking the browser’s back button after logout should display the login page. | Low          |
-| S14              | Check if the session token is invalidated after logout.   | 1. Logout from the application. <br> 2. Try to reuse the session token. | Session token should be invalidated to prevent reuse.      | Medium       |
-| S15              | Verify that no errors occur when attempting to log out repeatedly. | 1. Logout from the application multiple times. | No errors should be triggered when logging out multiple times. | Low          |
+| S6         | Verify that the user cannot access the dashboard after logout. | 1. Logout from the application. <br> 2. Try to access the dashboard directly via URL. | Trying to access the dashboard after logout should show a login screen. | High         |
+| S7         | Ensure that no personal information is retained after logout. | 1. Logout from the application. <br> 2. Verify that no personal information is displayed on the login page. | No personal data should be available after logout.         | Medium       |
+| S8         | Verify that clicking logout logs the user out across all open tabs. | 1. Open multiple tabs in the browser. <br> 2. Click the logout button in one tab. <br> 3. Check the other tabs to verify logout. | User should be logged out from all active browser tabs.    | High         |
+| S9         | Ensure the logout button works across all screen sizes.   | 1. Open the application on different devices (desktop, tablet, mobile). <br> 2. Check if the logout button is functional on each device. | Logout button should work seamlessly on desktop and mobile. | High         |
+| S10        | Verify that clicking logout logs the user out of integrated services. | 1. Logout from the application. <br> 2. Check if the user is logged out from integrated services (e.g., Google, Facebook). | User should be logged out from third-party services integrated into the app. | Medium       |
+| S11        | Check if the system provides any confirmation for logging out. | 1. Click the logout button. <br> 2. Check if there is a confirmation dialog before logout. | System may display a confirmation message before logging out. | Low          |
+| S12        | Verify logout behavior when multiple sessions are active. | 1. Log in to the application on multiple devices or browsers. <br> 2. Click the logout button on one device. | User should be logged out of all active sessions.           | High         |
+| S13        | Ensure that after logout, clicking the back button shows the login page. | 1. Logout from the application. <br> 2. Click the browser’s back button. | Clicking the browser’s back button after logout should display the login page. | Low          |
+| S14        | Check if the session token is invalidated after logout.   | 1. Logout from the application. <br> 2. Try to reuse the session token. | Session token should be invalidated to prevent reuse.      | Medium       |
+| S15        | Verify that no errors occur when attempting to log out repeatedly. | 1. Logout from the application multiple times. | No errors should be triggered when logging out multiple times. | Low          |
 
 
 
