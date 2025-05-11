@@ -134,28 +134,27 @@
 
 
 ----------
-
 ## e2e
 
 | TC ID     | Test Scenario                          | Test Steps                                                                   | Expected Result                                                  | Priority |
 |-----------|-----------------------------------------|-------------------------------------------------------------------------------|------------------------------------------------------------------|----------|
-| TC_E2E_01 | User registration to login               | Register user > logout > login                                               | Full cycle works                                                 | High     |
-| TC_E2E_02 | Login to order confirmation              | Login > add item > checkout > confirm order                                  | Order placed successfully                                        | High     |
-| TC_E2E_03 | Reset password full cycle                | Forgot password > email > reset > login                                      | Password reset works end to end                                  | High     |
-| TC_E2E_04 | Social login to profile update           | Login via Google > update profile                                            | Flow works without issues                                        | Medium   |
-| TC_E2E_05 | Guest to registered purchase             | Add item as guest > register > checkout                                      | Purchase successful                                               | High     |
-| TC_E2E_06 | Search > view > add to cart > checkout   | Search product > view detail > add to cart > buy                             | End-to-end transaction completed                                 | High     |
-| TC_E2E_07 | OTP verification during sign-up          | Register > verify OTP > login                                                | User signed up successfully                                      | High     |
-| TC_E2E_08 | File upload > download                   | Upload doc > download same file                                              | Upload and download successful                                   | Medium   |
-| TC_E2E_09 | Filter > sort > checkout                 | Filter products > sort > select > buy                                        | Flow works smoothly                                               | Medium   |
-| TC_E2E_10 | Multi-device session check               | Login on one device > perform actions > check sync on another                | Data/session consistent                                           | Medium   |
-| TC_E2E_11 | Contact form to email                    | Submit contact form > check admin inbox                                      | Email received                                                    | Low      |
-| TC_E2E_12 | Role-based navigation                    | Login as admin/user > check accessible pages                                 | Role permissions respected                                        | High     |
-| TC_E2E_13 | Add to wishlist > move to cart > buy     | Add to wishlist > move to cart > buy                                         | Product bought successfully                                       | Medium   |
-| TC_E2E_14 | Email verification post-registration     | Register > check inbox > verify email                                        | Email verified                                                    | High     |
-| TC_E2E_15 | Infinite scroll till checkout            | Scroll products > add item from bottom > checkout                            | Checkout works seamlessly                                         | Medium   |
----
+| TC_E2E_01 | User registration to login              | Register user → Logout → Login                                               | Full cycle works                                                 | High     |
+| TC_E2E_02 | Login to order confirmation             | Login → Add item → Checkout → Confirm order                                  | Order placed successfully                                        | High     |
+| TC_E2E_03 | Reset password full cycle               | Forgot password → Email → Reset → Login                                      | Password reset works end to end                                  | High     |
+| TC_E2E_04 | Social login to profile update          | Login via Google → Update profile                                            | Flow works without issues                                        | Medium   |
+| TC_E2E_05 | Guest to registered purchase            | Add item as guest → Register → Checkout                                      | Purchase successful                                               | High     |
+| TC_E2E_06 | Search > view > add to cart > checkout  | Search product → View detail → Add to cart → Buy                             | End-to-end transaction completed                                 | High     |
+| TC_E2E_07 | OTP verification during sign-up         | Register → Verify OTP → Login                                                | User signed up successfully                                      | High     |
+| TC_E2E_08 | File upload > download                  | Upload document → Download same file                                         | Upload and download successful                                   | Medium   |
+| TC_E2E_09 | Filter > sort > checkout                | Filter products → Sort → Select → Buy                                        | Flow works smoothly                                              | Medium   |
+| TC_E2E_10 | Multi-device session check              | Login on one device → Perform actions → Check sync on another                | Data/session consistent                                          | Medium   |
+| TC_E2E_11 | Contact form to email                   | Submit contact form → Check admin inbox                                      | Email received                                                    | Low      |
+| TC_E2E_12 | Role-based navigation                   | Login as admin/user → Check accessible pages                                 | Role permissions respected                                       | High     |
+| TC_E2E_13 | Add to wishlist → move to cart → buy    | Add to wishlist → Move to cart → Buy                                         | Product bought successfully                                      | Medium   |
+| TC_E2E_14 | Email verification post-registration    | Register → Check inbox → Verify email                                        | Email verified                                                    | High     |
+| TC_E2E_15 | Infinite scroll till checkout           | Scroll products → Add item from bottom → Checkout                            | Checkout works seamlessly                                        | Medium   |
 
+---
 
 
 **Prepared by:** [Pratik Joshi]   
