@@ -163,23 +163,24 @@
 
 ## E2E 
 
-| TC ID     | Test Scenario                                      | Test Steps                                                                 | Expected Result                                      | Priority |
-|-----------|---------------------------------------------------|------------------------------------------------------------------------------|-----------------------------------------------------|----------|
-| E2E_TC_01 | Complete user registration to login               | Register > Confirm email > Login                                            | User successfully onboarded                         | High     |
-| E2E_TC_02 | User login and profile update                     | Login > Update profile > Save                                               | Data updated                                        | High     |
-| E2E_TC_03 | Search and add product to cart                    | Search product > Add to cart                                                | Product added                                       | High     |
-| E2E_TC_04 | Complete checkout with payment                    | Add to cart > Checkout > Pay                                                | Order placed                                        | High     |
-| E2E_TC_05 | Password change and verification                  | Change password > Logout > Login                                            | New password works                                  | High     |
-| E2E_TC_06 | Forgot password and reset                         | Request reset > Receive mail > Reset password                               | Password reset successful                           | High     |
-| E2E_TC_07 | Social login to checkout                          | Login with Google > Add to cart > Checkout                                  | Order placed                                        | Medium   |
-| E2E_TC_08 | File upload and download                          | Upload file > Download it                                                   | File downloads correctly                            | Medium   |
-| E2E_TC_09 | Contact form submission and admin view            | Submit form > Login as admin > Check response                               | Form visible to admin                               | Medium   |
-| E2E_TC_10 | View order history                                | Place order > Go to history                                                 | Order listed                                        | Medium   |
-| E2E_TC_11 | OTP verification in login                         | Login with OTP                                                              | OTP verified and access granted                     | High     |
-| E2E_TC_12 | Role switch and permission check                  | Login as admin > Edit user role > Verify permissions                        | User role changed and reflected                     | Medium   |
-| E2E_TC_13 | Checkout cart with coupon                         | Add items > Apply coupon > Checkout                                         | Discount applied and order placed                   | Medium   |
-| E2E_TC_14 | Pagination through order list                     | View multiple orders                                                        | Correct pagination works                            | Low      |
-| E2E_TC_15 | Filtering products                                | Apply category filter                                                       | Filtered products shown                             | Medium   |
+| TC ID      | Test Scenario                          | Test Steps                                         | Expected Result                    | Priority |
+|------------|-----------------------------------------|---------------------------------------------------|------------------------------------|----------|
+| E2E_TC_01  | Complete user registration to login     | Register > Confirm email > Login                  | User successfully onboarded        | High     |
+| E2E_TC_02  | User login and profile update           | Login > Update profile > Save                     | Data updated                       | High     |
+| E2E_TC_03  | Search and add product to cart          | Search product > Add to cart                      | Product added                      | High     |
+| E2E_TC_04  | Complete checkout with payment          | Add to cart > Checkout > Pay                      | Order placed                       | High     |
+| E2E_TC_05  | Password change and verification        | Change password > Logout > Login                  | New password works                 | High     |
+| E2E_TC_06  | Forgot password and reset               | Request reset > Receive mail > Reset password     | Password reset successful          | High     |
+| E2E_TC_07  | Social login to checkout                | Login with Google > Add to cart > Checkout        | Order placed                       | Medium   |
+| E2E_TC_08  | File upload and download                | Upload file > Download it                         | File downloads correctly           | Medium   |
+| E2E_TC_09  | Contact form submission and admin view  | Submit form > Login as admin > Check response     | Form visible to admin              | Medium   |
+| E2E_TC_10  | View order history                      | Place order > Go to history                       | Order listed                       | Medium   |
+| E2E_TC_11  | OTP verification in login               | Login with OTP                                    | OTP verified and access granted    | High     |
+| E2E_TC_12  | Role switch and permission check        | Login as admin > Edit user role > Verify perms    | User role changed and reflected    | Medium   |
+| E2E_TC_13  | Checkout cart with coupon               | Add items > Apply coupon > Checkout               | Discount applied and order placed  | Medium   |
+| E2E_TC_14  | Pagination through order list           | View multiple orders                              | Correct pagination works           | Low      |
+| E2E_TC_15  | Filtering products                      | Apply category filter                             | Filtered products shown            | Medium   |
+
 ---
 
 **Prepared by:** [Pratik Joshi]   
