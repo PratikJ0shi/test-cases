@@ -13,6 +13,64 @@
             padding: 0;
             color: #333;
         }
+
+
+    header {
+      background: #1e88e5; /* Blue header */
+      color: white;
+      padding: 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    header h1 {
+        color: #fff;
+      font-size: 1.6rem;
+    }
+
+    nav {
+      display: flex;
+      gap: 20px;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+      color: #ffcc00;
+    }
+
+    .btn {
+      text-decoration: none;
+      color: white;
+      border: 2px solid transparent;
+      background: #1e88e5;
+      text-align: center;
+    }
+
+    .hamburger {
+      display: none;
+      flex-direction: column;
+      cursor: pointer;
+    }
+
+    .hamburger div {
+      height: 3px;
+      background: white;
+      margin: 4px;
+      width: 25px;
+    }
+
+    .nav-links {
+      display: flex;
+    }
+
         a{text-decoration: none;}
         a:hover {
           color: green; /* Changes color on hover */
@@ -120,7 +178,7 @@
         }
 
         footer {
-            background-color: #333;
+            background-color: #1e88e5;
             color: white;
             padding: 20px;
             text-align: center;
@@ -142,6 +200,26 @@
                 padding: 10px;
                 font-size: 1em;
             }
+            .nav-links {
+        display: none;
+        width: 100%;
+        flex-direction: column;
+        margin-top: 10px;
+        background: #007bb5;
+        padding: 10px;
+      }
+
+      .nav-links a {
+        margin: 10px 0;
+      }
+
+      .hamburger {
+        display: flex;
+      }
+
+      .nav-links.active {
+        display: flex;
+      }
 
             h1 {
                 font-size: 1.5em;
@@ -177,6 +255,20 @@
     </style>
 </head>
 <body>
+
+      <header>
+    <h1>Pratik Joshi - Testcase Module</h1>
+    <div class="hamburger" onclick="toggleMenu()">
+      <div></div><div></div><div></div>
+    </div>
+    <nav class="nav-links" id="navLinks">
+      <a href="#blogs">Practice-Hub</a>
+      <a href="#testcases">Playground</a>
+      <a href="#playground">Blogs</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
 
     <!-- Section 1 -->
     <div class="section section-1">
@@ -426,5 +518,11 @@
     <footer>
         <p>© 2025 Pratik Joshi | <a href="https://pratiks-desk.site">Visit my website</a></p>
     </footer>
+
+    <script>
+    function toggleMenu() {
+      document.getElementById('navLinks').classList.toggle('active');
+    }
+  </script>
 </body>
 </html>
