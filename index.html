@@ -198,9 +198,9 @@
         @media (max-width: 820px) {
             body {
                 padding: 10px;
-                font-size: 1em;
+                font-size: 1.3em;
             }
-            header{paddding:10px;}
+            header{paddding:7px;}
             header h1{font-size:1rem;}
            .navbar {
     flex-direction: column;
@@ -210,15 +210,21 @@
     display: flex;
     align-self: flex-end;
   }
+             .hamburger div {
+      height: 2px;
+      background: white;
+      margin: 2.5px;
+      width: 18px;
+    }
 
   .nav-links {
     align-items: center;
     display: none;
     position: absolute;
-    top: 90px;
-    right: 1px;
+    top: 85px;
+    right: 15px;
     transition: all .7s ease;
-    width: 78%;
+    width: 70%;
     flex-direction: column;
     background: darkslategrey;
     padding: 8px 0;
